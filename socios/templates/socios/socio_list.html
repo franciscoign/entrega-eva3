@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Socios del gimnasio{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Socios del gimnasio</h1>
+
+<div class="row">
+    {% for socio in socios %}
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">{{ socio.nombre }}</h5>
+                <p class="card-text mb-1">{{ socio.edad }} años</p>
+                <span class="badge bg-secondary">{{ socio.plan.nombre }}</span>
+                {% if socio.activo %}
+                    <span class="badge bg-success">Activo</span>
+                {% else %}
+                    <span class="badge bg-danger">Inactivo</span>
+                {% endif %}
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'socio_detail' socio.pk %}" class="btn btn-sm btn-primary">Ver</a>
+                <a href="{% url 'socio_update' socio.pk %}" class="btn btn-sm btn-warning">Editar</a>
+                <a href="{% url 'socio_delete' socio.pk %}" class="btn btn-sm btn-danger">Eliminar</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>No hay socios registrados.</p>
+    {% endfor %}
+</div>
+{% endblock %}

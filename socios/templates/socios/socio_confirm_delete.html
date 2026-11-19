@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Eliminar socio{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Eliminar socio</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <p>¿Seguro que desea eliminar a <strong>{{ object.nombre }}</strong>?</p>
+    <button type="submit" class="btn btn-danger">Sí, eliminar</button>
+    <a href="{% url 'socio_list' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

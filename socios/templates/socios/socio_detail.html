@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ socio.nombre }}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title">{{ socio.nombre }}</h1>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Edad:</strong> {{ socio.edad }} años</li>
+            <li class="list-group-item"><strong>Plan:</strong> {{ socio.plan.nombre }} (${{ socio.plan.precio_mensual }} al mes)</li>
+            <li class="list-group-item"><strong>Fecha de inscripción:</strong> {{ socio.fecha_inscripcion|date:"d/m/Y" }}</li>
+            <li class="list-group-item"><strong>Activo:</strong> {{ socio.activo|yesno:"Sí,No" }}</li>
+        </ul>
+    </div>
+    <div class="card-footer">
+        <a href="{% url 'socio_list' %}" class="btn btn-secondary">Volver</a>
+        <a href="{% url 'socio_update' socio.pk %}" class="btn btn-warning">Editar</a>
+        <a href="{% url 'socio_delete' socio.pk %}" class="btn btn-danger">Eliminar</a>
+    </div>
+</div>
+{% endblock %}
