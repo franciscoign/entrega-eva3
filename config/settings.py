@@ -89,6 +89,11 @@ USE_TZ = True
 
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'socio_list'
+LOGOUT_REDIRECT_URL = 'socio_list'
 
 
 MAILERS = {
