@@ -1,0 +1,18 @@
+[
+  {"model": "socios.plan", "pk": 1, "fields": {"nombre": "Plan Basico", "precio_mensual": 19990}},
+  {"model": "socios.plan", "pk": 2, "fields": {"nombre": "Plan Full", "precio_mensual": 29990}},
+  {"model": "socios.plan", "pk": 3, "fields": {"nombre": "Plan Estudiante", "precio_mensual": 14990}},
+  {"model": "socios.plan", "pk": 4, "fields": {"nombre": "Plan Anual", "precio_mensual": 24990}},
+
+  {"model": "socios.socio", "pk": 1, "fields": {"plan": 1, "nombre": "Juan Perez", "edad": 28, "fecha_inscripcion": "2026-01-10", "activo": true}},
+  {"model": "socios.socio", "pk": 2, "fields": {"plan": 1, "nombre": "Maria Gonzalez", "edad": 34, "fecha_inscripcion": "2026-02-03", "activo": true}},
+  {"model": "socios.socio", "pk": 3, "fields": {"plan": 1, "nombre": "Pedro Soto", "edad": 45, "fecha_inscripcion": "2025-11-20", "activo": false}},
+  {"model": "socios.socio", "pk": 4, "fields": {"plan": 2, "nombre": "Camila Rojas", "edad": 25, "fecha_inscripcion": "2026-03-15", "activo": true}},
+  {"model": "socios.socio", "pk": 5, "fields": {"plan": 2, "nombre": "Diego Munoz", "edad": 31, "fecha_inscripcion": "2026-04-01", "activo": true}},
+  {"model": "socios.socio", "pk": 6, "fields": {"plan": 2, "nombre": "Valentina Diaz", "edad": 29, "fecha_inscripcion": "2026-05-12", "activo": false}},
+  {"model": "socios.socio", "pk": 7, "fields": {"plan": 3, "nombre": "Matias Silva", "edad": 20, "fecha_inscripcion": "2026-03-01", "activo": true}},
+  {"model": "socios.socio", "pk": 8, "fields": {"plan": 3, "nombre": "Fernanda Torres", "edad": 22, "fecha_inscripcion": "2026-03-05", "activo": true}},
+  {"model": "socios.socio", "pk": 9, "fields": {"plan": 4, "nombre": "Jorge Castro", "edad": 52, "fecha_inscripcion": "2026-01-02", "activo": true}},
+  {"model": "socios.socio", "pk": 10, "fields": {"plan": 4, "nombre": "Daniela Fuentes", "edad": 38, "fecha_inscripcion": "2026-06-18", "activo": true}},
+  {"model": "socios.socio", "pk": 11, "fields": {"plan": 4, "nombre": "Sebastian Vera", "edad": 41, "fecha_inscripcion": "2026-07-22", "activo": false}}
+]
